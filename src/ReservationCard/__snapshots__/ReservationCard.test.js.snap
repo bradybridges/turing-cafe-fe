@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReservationCard should match the snapshot 1`] = `
+<Fragment>
+  <h2>
+    brady
+  </h2>
+  <p>
+    10/22
+  </p>
+  <p>
+    10:30
+  </p>
+  <p>
+    Number of guests: 
+    10
+  </p>
+  <button>
+    Cancel
+  </button>
+</Fragment>
+`;

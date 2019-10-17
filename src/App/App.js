@@ -14,10 +14,8 @@ class App extends Component {
 
   componentDidMount() {
     fetchReservations()
-      .then( reservations => {
-        this.setState({ reservations });
-        console.log(reservations);
-      })
+      .then( reservations => this.setState({ reservations }));
+      
   }
 
   addReservation = reservation => {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { fetchReservations, insertReservation } from '../apiCalls';
+import { fetchReservations, insertReservation, removeReservation } from '../apiCalls';
 import ReservationCard from '../ReservationCard/ReservationCard';
 import ReservationForm from '../ReservationForm/ReservationForm';
 
@@ -28,6 +28,29 @@ class App extends Component {
     });
   }
 
+  cancelReservation = e => {
+    const id = e.target.id;
+    removeReservation(id)
+      .then(resp => {
+        const reservations = this.state.reservations.filter(res => res.id !== Number(id));
+        this.setState({ reservations });
+      });
+  }
+
+  returnReservations = () => {
+    return this.state.reservations.map((res, i) => {
+      return <ReservationCard 
+        name={res.name} 
+        date={res.date} 
+        time={res.time} 
+        number={res.number} 
+        id={res.id} 
+        key={i}
+        cancelReservation={this.cancelReservation}
+      />
+    });
+  }
+
 
   render() {
 
@@ -38,7 +61,7 @@ class App extends Component {
           <ReservationForm addReservation={this.addReservation} />
         </div>
         <div className='resy-container'>
-          {this.state.reservations.map(res => <ReservationCard name={res.name} date={res.date} time={res.time} number={res.number} id={res.id} />)}
+          {this.returnReservations()}
         </div>
       </div>
     )

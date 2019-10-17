@@ -1,0 +1,34 @@
+h2 {
+  color: white;
+  text-shadow: 5px -3px 9px black;
+}
+
+p {
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
+  color: white;
+  padding: 10px 0px;
+}
+
+.resButton {
+  background-color: #ddd;
+  border-radius: 2px;
+  height: 40px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.resButton:hover {
+  background-color: teal;
+  border: solid #000000a1 1px;
+  box-shadow: 4px -4px 12px #0000009c;
+  color: white;
+}
+
+.resCard {
+  background-color: #2d3e39f0;
+  border-radius: 4px;
+  margin: 10px 0px;
+  width: 32%;
+}
+

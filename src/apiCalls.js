@@ -13,3 +13,12 @@ export const insertReservation = reservation => {
     .then(resp => resp.json());
 
 }
+
+export const removeReservation = id => {
+  const options = {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' }
+  };
+  return fetch(`http://localhost:3001/api/v1/reservations/${id}`, options)
+    .then(resp => resp.json());
+}

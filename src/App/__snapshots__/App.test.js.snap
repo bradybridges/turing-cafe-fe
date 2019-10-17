@@ -20,6 +20,7 @@ exports[`App should match the snapshot 1`] = `
     className="resy-container"
   >
     <ReservationCard
+      cancelReservation={[Function]}
       date="12/22"
       id={1}
       key="0"
@@ -28,6 +29,7 @@ exports[`App should match the snapshot 1`] = `
       time="8:00"
     />
     <ReservationCard
+      cancelReservation={[Function]}
       date="12/23"
       id={2}
       key="1"

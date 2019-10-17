@@ -3,13 +3,13 @@ import './ReservationCard.css'
 
 const ReservationCard = (props) => {
   return (
-    <>
+    <section className='resCard'>
       <h2>{props.name}</h2>
-      <p>{props.date}</p>
-      <p>{props.time}</p>
+      <p>Date: {props.date}</p>
+      <p>Time: {props.time}</p>
       <p>Number of guests: {props.number}</p>
-      <button id={props.id} onClick={props.cancelReservation}>Cancel</button>
-    </>
+      <button id={props.id} className='resButton' onClick={props.cancelReservation}>Cancel</button>
+    </section>
   );
 };
 

@@ -23,7 +23,7 @@ class ReservationForm extends Component {
     const isNameGood = this.state.name !== '';
     const isDateGood = this.state.date !== '';
     const isTimeGood = this.state.time !== '';
-    const isNumberGood = this.state.number !== '';
+    const isNumberGood = this.state.number !== 0;
 
     if(isNameGood && isDateGood && isTimeGood && isNumberGood) {
       return true;

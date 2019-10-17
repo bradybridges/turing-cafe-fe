@@ -1,0 +1,25 @@
+form {
+  display: flex;
+  height: 40px;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  width: 90vw;
+}
+
+input {
+  border-radius: 4px;
+  font-size: 1em;
+  text-align: center;
+}
+
+button {
+  border-radius: 4px;
+  font-size: 1em;
+  width: 200px;
+}
+
+button:hover {
+  background-color: teal;
+  border: solid #000000a1 1px;
+  cursor: pointer;
+}
